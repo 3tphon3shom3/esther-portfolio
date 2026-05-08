@@ -1,473 +1,466 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Esther Tseng | Designer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Esther Tseng — Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  :root {
-    --cream: #f9f7f4;
-    --ink: #1a1916;
-    --muted: #6b6960;
-    --accent: #c8a96e;
-    --border: rgba(26,25,22,0.1);
-    --card-bg: #ffffff;
-  }
+    html { scroll-behavior: smooth; }
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--cream);
-    color: var(--ink);
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: #F7F5F0;
+      color: #1a1a1a;
+      min-height: 100vh;
+    }
 
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 3rem;
-    border-bottom: 1px solid var(--border);
-    position: sticky;
-    top: 0;
-    background: var(--cream);
-    z-index: 100;
-  }
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 36px 60px 0;
+      position: sticky;
+      top: 0;
+      background: #F7F5F0;
+      z-index: 10;
+      padding-bottom: 20px;
+    }
 
-  .nav-logo {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.1rem;
-    letter-spacing: 0.01em;
-  }
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 300;
+      letter-spacing: 0.02em;
+      color: #1a1a1a;
+      text-decoration: none;
+    }
 
-  .nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-  }
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
 
-  .nav-links a {
-    font-size: 0.85rem;
-    font-weight: 400;
-    color: var(--muted);
-    text-decoration: none;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    transition: color 0.2s;
-  }
+    .nav-links a {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #888;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
 
-  .nav-links a:hover { color: var(--ink); }
+    .nav-links a:hover { color: #9B2FC0; }
 
-  .hero {
-    padding: 6rem 3rem 4rem;
-    max-width: 900px;
-  }
+    /* HERO */
+    .hero {
+      padding: 72px 60px 64px;
+      max-width: 780px;
+    }
 
-  .hero-label {
-    font-size: 0.78rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--accent);
-    font-weight: 500;
-    margin-bottom: 1.5rem;
-  }
+    .hero-tag {
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #C0143C, #7B1FA2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
 
-  .hero h1 {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(3rem, 7vw, 5.5rem);
-    line-height: 1.05;
-    font-weight: 400;
-    margin-bottom: 1.5rem;
-    color: var(--ink);
-  }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 88px;
+      font-weight: 300;
+      line-height: 1.03;
+      letter-spacing: -0.01em;
+      color: #1a1a1a;
+      margin-bottom: 28px;
+    }
 
-  .hero h1 em {
-    font-style: italic;
-    color: var(--muted);
-  }
+    h1 em {
+      font-style: italic;
+      background: linear-gradient(100deg, #C0143C 20%, #7B1FA2 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
 
-  .hero-desc {
-    font-size: 1.05rem;
-    color: var(--muted);
-    max-width: 480px;
-    line-height: 1.7;
-    font-weight: 300;
-  }
+    .hero-sub {
+      font-size: 14px;
+      color: #888;
+      line-height: 1.8;
+      max-width: 400px;
+      letter-spacing: 0.01em;
+      font-weight: 300;
+    }
 
-  .hero-cta {
-    margin-top: 2.5rem;
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-  }
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 36px;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      background: linear-gradient(100deg, #C0143C, #7B1FA2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      border-bottom: 1px solid #9B2FC0;
+      padding-bottom: 4px;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
 
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.7rem 1.5rem;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.85rem;
-    letter-spacing: 0.04em;
-    border-radius: 100px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.2s;
-    font-weight: 400;
-  }
+    .cta:hover { opacity: 0.7; }
 
-  .btn-primary {
-    background: var(--ink);
-    color: var(--cream);
-    border: 1px solid var(--ink);
-  }
+    /* DIVIDER */
+    .divider {
+      height: 0.5px;
+      background: linear-gradient(90deg, #C0143C, #7B1FA2, transparent);
+      margin: 0 60px;
+      opacity: 0.35;
+    }
 
-  .btn-primary:hover { background: #333; }
+    /* WORK GRID */
+    .work-section {
+      padding: 60px 60px 80px;
+    }
 
-  .btn-ghost {
-    background: transparent;
-    color: var(--muted);
-    border: 1px solid var(--border);
-  }
+    .work-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
 
-  .btn-ghost:hover { color: var(--ink); border-color: var(--ink); }
+    .thumb {
+      cursor: pointer;
+    }
 
-  .divider {
-    height: 1px;
-    background: var(--border);
-    margin: 0 3rem;
-  }
+    .thumb-img {
+      width: 100%;
+      padding-top: 72%;
+      position: relative;
+      border-radius: 4px;
+      overflow: hidden;
+    }
 
-  .work-section {
-    padding: 4rem 3rem;
-  }
+    .thumb-inner {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
 
-  .section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 2.5rem;
-  }
+    .thumb:hover .thumb-inner { transform: scale(1.03); }
 
-  .section-title {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.6rem;
-    font-weight: 400;
-  }
+    .thumb:nth-child(1) .thumb-inner { background: linear-gradient(135deg, #f0ece6, #e8e0d5); }
+    .thumb:nth-child(2) .thumb-inner { background: linear-gradient(135deg, #1a1a2e, #2d1b4e); }
+    .thumb:nth-child(3) .thumb-inner { background: linear-gradient(135deg, #f5f0e8, #ede5d8); }
+    .thumb:nth-child(4) .thumb-inner { background: linear-gradient(135deg, #C0143C, #7B1FA2); }
 
-  .section-count {
-    font-size: 0.78rem;
-    color: var(--muted);
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-  }
+    .thumb-placeholder {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      font-weight: 300;
+      letter-spacing: 0.06em;
+      color: rgba(0,0,0,0.1);
+    }
 
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
+    .thumb:nth-child(2) .thumb-placeholder,
+    .thumb:nth-child(4) .thumb-placeholder {
+      color: rgba(255,255,255,0.2);
+    }
 
-  .project-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.25s, border-color 0.25s;
-    text-decoration: none;
-    color: inherit;
-    display: block;
-  }
+    .thumb-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+      background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
 
-  .project-card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(26,25,22,0.25);
-  }
+    .thumb:hover .thumb-overlay { opacity: 1; }
 
-  .project-card.featured {
-    grid-column: span 2;
-  }
+    .thumb-overlay span {
+      font-size: 10px;
+      color: #fff;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
 
-  .card-thumb {
-    width: 100%;
-    aspect-ratio: 16/9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-  }
+    .thumb-meta {
+      padding: 12px 0 4px;
+    }
 
-  .card-thumb.play-pass { background: #f0e6ff; }
-  .card-thumb.zendesk   { background: #e6f0ff; }
-  .card-thumb.boba      { background: #fff0e8; }
-  .card-thumb.play-subs { background: #e8f5e8; }
-  .card-thumb.kerf      { background: #f5f0e8; }
-  .card-thumb.brain     { background: #fff0f5; }
+    .thumb-category {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #C0143C, #7B1FA2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: inline-block;
+      margin-bottom: 4px;
+      font-weight: 400;
+    }
 
-  .thumb-icon { font-size: 2.5rem; opacity: 0.7; }
+    .thumb-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 19px;
+      font-weight: 400;
+      color: #1a1a1a;
+    }
 
-  .card-body { padding: 1.1rem 1.25rem 1.25rem; }
+    /* ABOUT SECTION */
+    .about-section {
+      padding: 72px 60px 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
 
-  .card-tag {
-    font-size: 0.72rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--accent);
-    font-weight: 500;
-    margin-bottom: 0.4rem;
-  }
+    .about-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 48px;
+      font-weight: 300;
+      line-height: 1.1;
+      color: #1a1a1a;
+      margin-bottom: 24px;
+    }
 
-  .card-title {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.05rem;
-    font-weight: 400;
-    margin-bottom: 0.4rem;
-  }
+    .about-section h2 em {
+      font-style: italic;
+      background: linear-gradient(100deg, #C0143C 20%, #7B1FA2 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
 
-  .card-desc {
-    font-size: 0.83rem;
-    color: var(--muted);
-    line-height: 1.55;
-    font-weight: 300;
-  }
+    .about-body {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.85;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
 
-  .about-section {
-    padding: 4rem 3rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: start;
-  }
+    .about-right {
+      padding-top: 8px;
+    }
 
-  .about-text h2 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.6rem;
-    font-weight: 400;
-    margin-bottom: 1.25rem;
-  }
+    .about-role {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #bbb;
+      margin-bottom: 6px;
+    }
 
-  .about-text p {
-    font-size: 0.95rem;
-    color: var(--muted);
-    line-height: 1.75;
-    font-weight: 300;
-    margin-bottom: 1rem;
-  }
+    .about-role-value {
+      font-size: 15px;
+      color: #1a1a1a;
+      font-weight: 400;
+      margin-bottom: 28px;
+    }
 
-  .about-details { display: flex; flex-direction: column; gap: 2rem; }
+    .about-links {
+      display: flex;
+      gap: 20px;
+      margin-top: 8px;
+    }
 
-  .detail-group h4 {
-    font-size: 0.72rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--accent);
-    font-weight: 500;
-    margin-bottom: 0.6rem;
-  }
+    .about-links a {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #C0143C, #7B1FA2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      border-bottom: 1px solid #9B2FC0;
+      padding-bottom: 2px;
+      transition: opacity 0.2s;
+    }
 
-  .detail-group p { font-size: 0.9rem; color: var(--ink); line-height: 1.6; }
+    .about-links a:hover { opacity: 0.6; }
 
-  .interests { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
+    /* FOOTER */
+    footer {
+      border-top: 0.5px solid #e0ddd6;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
 
-  .interest-tag {
-    font-size: 0.8rem;
-    padding: 0.3rem 0.75rem;
-    border: 1px solid var(--border);
-    border-radius: 100px;
-    color: var(--muted);
-    background: var(--cream);
-  }
+    footer span {
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      color: #bbb;
+      text-transform: uppercase;
+      font-weight: 300;
+    }
 
-  footer {
-    border-top: 1px solid var(--border);
-    padding: 2rem 3rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #C0143C, #7B1FA2);
+      display: inline-block;
+      flex-shrink: 0;
+    }
 
-  .footer-left { font-size: 0.82rem; color: var(--muted); }
-
-  .footer-right { display: flex; gap: 1.5rem; }
-
-  .footer-right a {
-    font-size: 0.82rem;
-    color: var(--muted);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
-  .footer-right a:hover { color: var(--ink); }
-
-  .fade-in {
-    opacity: 0;
-    transform: translateY(16px);
-    animation: fadeUp 0.6s ease forwards;
-  }
-
-  @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
-
-  .delay-1 { animation-delay: 0.1s; }
-  .delay-2 { animation-delay: 0.2s; }
-  .delay-3 { animation-delay: 0.35s; }
-</style>
+    /* RESPONSIVE */
+    @media (max-width: 640px) {
+      nav { padding: 24px 24px 16px; }
+      .hero { padding: 48px 24px 48px; }
+      h1 { font-size: 56px; }
+      .divider { margin: 0 24px; }
+      .work-section { padding: 40px 24px 60px; }
+      .work-grid { grid-template-columns: 1fr; }
+      .about-section { padding: 48px 24px 60px; grid-template-columns: 1fr; gap: 32px; }
+      footer { padding: 20px 24px; }
+    }
+  </style>
 </head>
 <body>
 
-<nav>
-  <span class="nav-logo">Esther Tseng</span>
-  <ul class="nav-links">
-    <li><a href="#work">Work</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="https://www.linkedin.com/in/esther-tseng-34325750" target="_blank">Contact</a></li>
-  </ul>
-</nav>
+  <nav>
+    <a class="logo" href="#">Esther Tseng</a>
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
 
-<section class="hero">
-  <p class="hero-label fade-in">UX Designer · San Francisco Bay Area</p>
-  <h1 class="fade-in delay-1">Designing <em>thoughtful</em><br>digital experiences</h1>
-  <p class="hero-desc fade-in delay-2">
-    Sr. UX Designer at Google. I turn complex problems into clear, delightful interfaces — from subscriptions and billing to app store ecosystems.
-  </p>
-  <div class="hero-cta fade-in delay-3">
-    <a href="#work" class="btn btn-primary">View work</a>
-    <a href="https://dribbble.com/esthertseng" target="_blank" class="btn btn-ghost">Dribbble →</a>
-  </div>
-</section>
+  <section class="hero">
+    <div class="hero-tag">Sr. UX Designer — San Francisco Bay Area</div>
+    <h1>Design that<br><em>delights</em><br>people.</h1>
+    <p class="hero-sub">Crafting thoughtful digital experiences — from subscription platforms to playful illustrations — that make complex things feel simple and human.</p>
+    <a class="cta" href="#work">View selected work &nbsp;↓</a>
+  </section>
 
-<div class="divider"></div>
+  <div class="divider"></div>
 
-<section class="work-section" id="work">
-  <div class="section-header">
-    <h2 class="section-title">Selected work</h2>
-    <span class="section-count">6 projects</span>
-  </div>
+  <section class="work-section" id="work">
+    <div class="work-grid">
 
-  <div class="projects-grid">
+      <a class="thumb" href="http://esthertseng.com/playpass.html" target="_blank" style="text-decoration:none;">
+        <div class="thumb-img">
+          <div class="thumb-inner" style="background:#2D2D4E;"></div>
+          <div class="thumb-overlay"><span>View project ↗</span></div>
+        </div>
+        <div class="thumb-meta">
+          <div class="thumb-category">Product Design · Google</div>
+          <div class="thumb-name">Google Play Pass</div>
+        </div>
+      </a>
 
-    <a class="project-card featured" href="http://esthertseng.com/playpass.html" target="_blank">
-      <div class="card-thumb play-pass">
-        <span class="thumb-icon">🎮</span>
-      </div>
-      <div class="card-body">
-        <p class="card-tag">Google · Product Design</p>
-        <h3 class="card-title">Google Play Pass</h3>
-        <p class="card-desc">A subscription to hundreds of games &amp; apps — completely free of ads and in-app purchases.</p>
-      </div>
-    </a>
+      <a class="thumb" href="http://esthertseng.com/zendesk.html" target="_blank" style="text-decoration:none;">
+        <div class="thumb-img">
+          <div class="thumb-inner" style="background:#1F4D3A;"></div>
+          <div class="thumb-overlay"><span>View project ↗</span></div>
+        </div>
+        <div class="thumb-meta">
+          <div class="thumb-category">UX Design · Billing</div>
+          <div class="thumb-name">Zendesk</div>
+        </div>
+      </a>
 
-    <a class="project-card" href="http://esthertseng.com/zendesk.html" target="_blank">
-      <div class="card-thumb zendesk">
-        <span class="thumb-icon">🧾</span>
-      </div>
-      <div class="card-body">
-        <p class="card-tag">Zendesk · UX</p>
-        <h3 class="card-title">Zendesk Billing</h3>
-        <p class="card-desc">A beautifully simple billing and checkout experience for managing multiple products.</p>
-      </div>
-    </a>
+      <a class="thumb" href="http://esthertseng.com/play-subscriptions.html" target="_blank" style="text-decoration:none;">
+        <div class="thumb-img">
+          <div class="thumb-inner" style="background:#3B2A4E;"></div>
+          <div class="thumb-overlay"><span>View project ↗</span></div>
+        </div>
+        <div class="thumb-meta">
+          <div class="thumb-category">Product Design · Google</div>
+          <div class="thumb-name">Google Play Subscriptions</div>
+        </div>
+      </a>
 
-    <a class="project-card" href="http://esthertseng.com/play-subscriptions.html" target="_blank">
-      <div class="card-thumb play-subs">
-        <span class="thumb-icon">📱</span>
-      </div>
-      <div class="card-body">
-        <p class="card-tag">Google · Platform Design</p>
-        <h3 class="card-title">Google Play Subscriptions</h3>
-        <p class="card-desc">A robust subscriptions platform for the Android universe.</p>
-      </div>
-    </a>
+      <a class="thumb" href="http://esthertseng.com/bots.html" target="_blank" style="text-decoration:none;">
+        <div class="thumb-img">
+          <div class="thumb-inner" style="background:#4A2030;"></div>
+          <div class="thumb-overlay"><span>View project ↗</span></div>
+        </div>
+        <div class="thumb-meta">
+          <div class="thumb-category">Illustration</div>
+          <div class="thumb-name">Boba of the Spirit</div>
+        </div>
+      </a>
 
-    <a class="project-card" href="http://esthertseng.com/kerfmaker.html" target="_blank">
-      <div class="card-thumb kerf">
-        <span class="thumb-icon">🪵</span>
-      </div>
-      <div class="card-body">
-        <p class="card-tag">Side Project · App Design</p>
-        <h3 class="card-title">Kerfmaker</h3>
-        <p class="card-desc">Helping woodworkers generate automatic cut lists and optimal board cutting plans.</p>
-      </div>
-    </a>
+      <a class="thumb" href="http://esthertseng.com/kerfmaker.html" target="_blank" style="text-decoration:none;">
+        <div class="thumb-img">
+          <div class="thumb-inner" style="background:#2A3D4A;"></div>
+          <div class="thumb-overlay"><span>View project ↗</span></div>
+        </div>
+        <div class="thumb-meta">
+          <div class="thumb-category">App Design</div>
+          <div class="thumb-name">Kerfmaker</div>
+        </div>
+      </a>
 
-    <a class="project-card" href="http://esthertseng.com/bots.html" target="_blank">
-      <div class="card-thumb boba">
-        <span class="thumb-icon">🧋</span>
-      </div>
-      <div class="card-body">
-        <p class="card-tag">Illustration · Personal</p>
-        <h3 class="card-title">Boba of the Spirit</h3>
-        <p class="card-desc">A series of illustrated coasters inspired by the Fruit of the Spirit, now available for purchase.</p>
-      </div>
-    </a>
+      <a class="thumb" href="http://esthertseng.com/her-brain.html" target="_blank" style="text-decoration:none;">
+        <div class="thumb-img">
+          <div class="thumb-inner" style="background:#4A3A28;"></div>
+          <div class="thumb-overlay"><span>View project ↗</span></div>
+        </div>
+        <div class="thumb-meta">
+          <div class="thumb-category">Illustration · Fun</div>
+          <div class="thumb-name">Esther's Brain</div>
+        </div>
+      </a>
 
-    <a class="project-card" href="http://esthertseng.com/her-brain.html" target="_blank">
-      <div class="card-thumb brain">
-        <span class="thumb-icon">🦄</span>
-      </div>
-      <div class="card-body">
-        <p class="card-tag">Illustration · Fun</p>
-        <h3 class="card-title">Esther's Brain</h3>
-        <p class="card-desc">Narwhals, bubble tea, greeting cards, rice balls — the fun doesn't stop.</p>
-      </div>
-    </a>
-
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<section class="about-section" id="about">
-  <div class="about-text">
-    <h2>A little about me</h2>
-    <p>
-      As a young student, instead of taking notes about George Washington crossing the Delaware River, I'd doodle little storyboards instead. My teacher caught me — and instead of scolding me, suggested I pursue graphic design. Her advice changed my life.
-    </p>
-    <p>
-      Today I design at Google, where I bring that same creative instinct to products used by millions. Good design, to me, is invisible — it just feels right.
-    </p>
-  </div>
-
-  <div class="about-details">
-    <div class="detail-group">
-      <h4>Currently</h4>
-      <p>Sr. UX Designer at Google<br>San Francisco Bay Area</p>
     </div>
-    <div class="detail-group">
-      <h4>Interests</h4>
-      <div class="interests">
-        <span class="interest-tag">Boba tea</span>
-        <span class="interest-tag">Harry Potter</span>
-        <span class="interest-tag">Cold brew</span>
-        <span class="interest-tag">Music</span>
-        <span class="interest-tag">Pokémon</span>
-        <span class="interest-tag">Illustration</span>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="about-section" id="about">
+    <div class="about-left">
+      <h2>A designer<br>with a <em>story.</em></h2>
+      <p class="about-body">As a young student, instead of taking notes about George Washington crossing the Delaware River, I'd doodle little storyboards. One day my teacher caught me — and instead of scolding me, suggested I pursue graphic design. Her advice changed my life.</p>
+      <p class="about-body">Besides designing stuff on screens, I'm a boba tea enthusiast, Harry Potter nerd, aspiring musician, and cold brew admirer.</p>
+    </div>
+    <div class="about-right">
+      <div class="about-role">Currently</div>
+      <div class="about-role-value">Sr. UX Designer at Google<br>San Francisco Bay Area</div>
+      <div class="about-role">Find me online</div>
+      <div class="about-links">
+        <a href="https://www.linkedin.com/in/esther-tseng-34325750" target="_blank">LinkedIn</a>
+        <a href="https://dribbble.com/esthertseng" target="_blank">Dribbble</a>
       </div>
     </div>
-    <div class="detail-group">
-      <h4>Find me online</h4>
-      <p>
-        <a href="https://www.linkedin.com/in/esther-tseng-34325750" target="_blank" style="color: var(--ink); text-decoration: underline; text-underline-offset: 3px;">LinkedIn</a>
-        &nbsp;·&nbsp;
-        <a href="https://dribbble.com/esthertseng" target="_blank" style="color: var(--ink); text-decoration: underline; text-underline-offset: 3px;">Dribbble</a>
-      </p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <span class="footer-left">© Esther Tseng — All rights reserved. Stealing is bad.</span>
-  <div class="footer-right">
-    <a href="https://www.linkedin.com/in/esther-tseng-34325750" target="_blank">LinkedIn</a>
-    <a href="https://dribbble.com/esthertseng" target="_blank">Dribbble</a>
-  </div>
-</footer>
+  <footer>
+    <span>© Esther Tseng</span>
+    <span class="dot"></span>
+    <span>San Francisco Bay Area</span>
+    <span class="dot"></span>
+    <span>All rights reserved</span>
+  </footer>
 
 </body>
 </html>
